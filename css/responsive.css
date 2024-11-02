@@ -1,0 +1,97 @@
+@charset "utf-8";
+
+/* Pc */
+
+@media (min-width: 64em ){
+
+}
+
+
+/* tablet */
+
+@media (min-width: 46.25em ) and (max-width: 63.9375em ) {
+    .place-button,
+    .contract-form .form-submit-btn {
+        padding: 16px 20px;
+    }
+
+    #footer .social {
+        font-size: 36px;
+    }
+
+    #footer .social a {
+        margin: 0 4px;
+    }
+}
+/* Mobile */
+
+@media (max-width: 46.1875em ){
+    #nav .subnag {
+        position: initial;
+        background-color: #897f7f;
+        
+    }
+
+    #nav .subnag a{
+        color: aliceblue;
+        padding: 8px 36px
+    }
+    
+    #nav, #nav >li{
+        display: block;
+    }
+
+    #nav > li:first-child{
+        display: inline-block;
+    }
+
+    #header {
+        overflow: hidden;
+    }
+    #header .menu-mobile {
+        display: block;
+        position: fixed;
+        top:0;
+        right: 0;
+    }
+
+    #header .findbutton {
+        display: none;
+    }
+
+    #content .member-list{
+        width: 95%;
+    }
+
+    .contract-content .col{
+
+    }
+
+    .content-calen .bk-mobile{
+        width: 100%;
+        margin: 16px 0;
+    }
+
+    .contract-content {
+        margin: 4px;
+    }
+
+    .contract-content .col{
+        width: 100%;
+    }
+    
+    .place-body .place-button{
+        width: 100%;
+        padding: 16px 0;
+    }
+
+
+    .form-control{
+        margin: 8px 0;
+    }
+
+    .contract-form .form-submit-btn{
+        width: 100%;
+        padding: 16px;
+    }
+}

@@ -1,0 +1,564 @@
+@charset "utf-8";
+/* reset boxsing xing */
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+html{
+    /* scroll dùng để hành động khi cuộn */
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* 
+    1. làm từ trên xuống dưới
+    2. làm từ ngoài vào trong
+    3. từ tổng quan đến chi tiết
+*/
+/* 1. Vị trí
+   2. kích thước (witdh, height)
+   3. màu sắc
+   4. kiểu chữ/ kiểu dáng */
+.clear{
+    /* Giúp cho những thẻ bỏ thuộc tính float(nổi lên) */
+    clear: both;
+}
+
+.text-white{
+    color: white !important; 
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-half{
+    width: 50%;
+}
+
+.col-full{
+    width: 100%;
+}
+
+.mb-col-full{
+    
+}
+
+.col-third{
+    width: 33.333%;
+}
+
+.text-center{
+    text-align: center !important; 
+}
+
+.mt-8{
+    margin-top: 8px;
+}
+
+.mt-16{
+    margin-top: 16px;
+}
+
+#main{
+
+}
+
+#header{
+    height: 46px;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#nav, .subnag {
+    list-style-type: none;
+}
+
+#nav,#nav >li{
+    display: inline-block;
+}
+
+#nav li {
+    position: relative;
+}
+
+
+#nav >li >a{
+    color: #fff;
+    text-transform: uppercase;
+}
+#nav li a {  
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display: block
+}
+
+#nav >li:hover> .subnag{
+    display: block;
+}
+
+#nav >li:hover> a,#nav .subnag a:hover{
+    color: black;
+    background-color: #b1a9a9;
+    
+}
+
+#nav .subnag {
+    display: none;
+    top:100%;
+    left:0;
+    min-width: 160px;
+    position:absolute;
+    background-color: #fff;
+    box-shadow: 0 0 3px;
+}
+#nav .subnag a {
+    color: black;
+    padding: 0 24px;
+    line-height: 36px;
+}
+
+#nav .ti-arrow-circle-down{
+    font-size: 14px;
+}
+
+
+
+#header .menu-mobile,
+#header .findbutton{
+    float: right;
+    padding: 0 21px;
+    cursor: pointer;
+}
+
+#header .menu-mobile{
+    display: none;
+}
+
+#header .menu-mobile:hover{
+    background-color: #ccc;
+}
+
+#header .ti-menu,
+#header .ti-search{
+    color:#fff;
+    font-size: 20px;
+    line-height: 46px;
+}
+
+#header .menu-mobile .ti-menu:hover{
+    color: #000;
+}
+
+#header .findbutton:hover{
+    background-color: red;
+}
+
+#header .menu-mobile:hover{
+
+}
+
+
+#slider {
+    position: relative;
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url('/image/Ai_girl.png') top center /cover no-repeat;
+}
+
+#slider .note{
+    color: rgb(218, 251, 0);
+    position: absolute;
+    bottom:10%;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+}
+
+.note .Girlname{
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.note .decrip{
+    font-size: 16px;
+}
+
+#content{
+    
+}
+
+#content .contexthead-about{
+    width: 800px;
+    max-width: 100%;
+    padding: 64px 16px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content .context-header{
+    font-size: 30px;
+    font-weight: 500; /*độ dày của chữ*/
+    letter-spacing: 2px;
+}
+
+#content .context-desc{
+        font-size: 14px;
+        margin-top: 25px;
+        font-style: italic;
+        opacity: 0.6;
+}
+
+#content .context-param{
+    margin-top: 25px;
+    font-size: 16px;
+    text-align: justify;
+    line-height: 1.6; /*khoảng cách giữa các dòng*/
+}
+
+
+#content .context-header,
+#content .context-desc,
+#content .member-name {
+    text-align: center;
+    margin: 8px 0;
+    font-weight: 600;
+}
+
+#content .context-param{
+    margin-bottom: 20px;
+}
+
+#content .contexthead-about img{
+    max-width: 100%;
+    border-radius: 6px;
+}
+
+.contexthead-about::after{
+    display: block;
+    content: "";
+    clear: both;
+}
+
+#content .member-list{
+    float: left;
+    width: 30%;
+    margin: 40px 10px;
+}
+
+.content-calen{
+    background-color: black;
+}
+
+.time-list{
+    background-color: #fff;
+    margin-top: 40px;
+    list-style: none;
+}
+
+
+.time-list li{
+    color: #757575;
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+    
+}
+
+.time-list .Sold-out{
+    background-color: #f44336;
+    color: #fff;
+    padding: 3px 4px;
+    margin-left: 16px;
+}
+
+
+.time-list .quantity{
+    float: right;
+    width: 24px;
+    height: 24px;
+    background: #000;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    margin-top: -3px;
+}
+
+.place-list{
+    margin-top: 32px;
+    margin-bottom: 48px;
+    
+}
+
+
+
+.place-item img{
+    width: 100%;
+    display: block;
+}
+
+.place-item img:hover{
+    opacity: 0.5;
+}
+
+.place-body{
+    padding: 16px;
+    font-size: 15px;
+    background: #fff;
+}
+
+.place-heading{
+    font-size: 15px;
+    font-weight: 550;
+}
+
+.place-time{
+    margin-top: 15px;
+    color: #757575;
+}
+
+.place-desc{
+    margin-top: 15px;
+    line-height: 1.4;
+}
+
+.place-button{
+    margin-top: 15px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #000;
+    padding: 11px 16px;
+    display: inline-block;
+
+}
+
+.place-button:hover{
+    background-color: #ccc;
+    color:#000
+    
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgb(0, 0, 0 , 0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.open{
+    display: flex;
+}
+
+.modal-container{
+    background: #fff;
+    width: 900px;
+    max-width: calc(100%-32px);
+    min-height: 200px;
+    position: relative;
+}
+
+.modal-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    padding: 12px;
+}
+
+.modal-close:hover{
+    cursor: pointer;
+    opacity: 0.6;
+    background-color: #757575;
+}
+
+header.modal-header{
+    background-color: #009688;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #fff;
+}
+
+.modal-header .ti-bag{
+    margin-right: 16px;
+}
+
+.modal-body{
+    padding: 16px;
+    
+}
+.model-label{
+    display: block;
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.modal-input{
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+#buy-ticket{
+    background: #009688;
+    border: none;
+    color: #fff;
+    width: 100%;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 16px;
+}
+
+#buy-ticket:hover{
+    background-color: #757575;
+    color: #000;
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.contract-content{
+    margin: 48px;
+}
+
+.contract-info {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.contract-info em[class*="ti-"] {
+    display: inline-block;
+}
+.contract-form .form-control{
+    font-size: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    
+}
+
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.contract-form .form-submit-btn{
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #ccc;
+    padding: 10px 16px;
+    float:right
+}
+
+.contract-form .form-submit-btn:hover{
+    background-color: #757575;
+    color: #000;
+    cursor: pointer;
+}
+
+.map-section img{
+    width: 100%;
+}
+
+.social a em{
+    text-decoration: none;
+}
+
+footer{
+    padding: 16px;
+    text-align: right;
+    
+}
+
+footer a{
+    color: #009688;
+}
+
+#footer{
+    padding: 64px 16px;
+    text-align: center;
+}
+
+#footer .social{
+    font-size: 24px;
+}
+
+#footer .social a{
+    color:rgb(79, 65, 65);
+    text-decoration: none;
+    
+}
+
+#footer .social a:hover{
+    color:rgb(79, 65, 65);
+    opacity: 0.6;
+    
+}
+
+.copyright{
+    margin: 16px;
+    color:rgb(79, 65, 65);
+}
+
+/* Responsive
+
+PC: >= 1024px
+Table: 740px < x < 1024px
+Mobile: <= 740px
+
+*/
+
+/* Keyfram treen Animista */
+.slide-in-fwd-center {
+	-webkit-animation: slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+@-webkit-keyframes slide-in-fwd-center {
+    0% {
+      -webkit-transform: translateZ(-1400px);
+              transform: translateZ(-1400px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-fwd-center {
+    0% {
+      -webkit-transform: translateZ(-1400px);
+              transform: translateZ(-1400px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+  }
